@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+
+@font-face {
+    font-family: "abrakadabra";
+    src: url("Pacifico-Regular.ttf");
+}
+*{ /*звездочка означает что относится ко всем элекментам*/
+    margin: 0; padding: 0;
+}
+
+
+body {
+    background-color: rgb(12, 128, 223);
+    background-image: url('https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80');
+    /* background-image:linear-gradient(-45deg,  red 5%,green 10%,rgb(30, 255, 0),yellow, blue) ; /*to right можно втсавлять и указывать каким образом распологаться цвету, влево, вправо, низ, вверх, по центру и т.д. но можно и указывать градусами deg можно указывать отрицательные и роложительные */
+    /* background-image: radial-gradient(red 5%, green -10%, blue, yellow, rgb(0, 195, 255) );   */
+    background-size: 50% 100% ;  /*чтобы картинка фона влезла, растянулась по горизонтали и чтобы по вертикали то указать contein  либо другие параметры например в процентах или пикселях например 1920px */
+    background-position: center bottom; /* например center center, top centre, rigth bottom и т.д.*/
+    background-attachment: fixed ; /* scroll или fixed*/
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 14pt; /* задается размер текста*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+h1,
+h2,
+h3 {
+    color: red;
+    background-color: black;
+    padding: 10px;
+}
+
+img {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.leftimg {
+    width: 350;
+    display: block;
+    margin: 20px auto;
+}
+
+.rightimg {
+    float: right;
+    width: 350;
+    margin: 20px;
+}
+
+.container p {
+    display: inline-block;
+    width: 300px;
+}
+
+.container img {
+    display: inline-block;
+    width: 300px;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    margin: 20px;
+    /* display: inline-block; */
+    /* float: left; 
+    float: right;*/
+}
+
+/* float не позволяет красиво распределить flex позволяет очень красиво распределить содержимое внутри блока */
+
+.container2 {
+    height: 600px;
+    width: 600px;
+    border: 2px solid green;
+    border-style: double;
+    border-image: url("images/v-strom-1000\ new.jpg");
+    border-image-repeat:stretch ;
+    border-width: 5px;
+    border-color: aqua;
+    ;
+    border-left-width: 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    /*space-around; 
+   center;  и другие значения*/
+    border-bottom-color: red;
+    align-items: center;
+    /*вертикальное выравнивание элемента */
+    position: relative;
+    /* overflow: hidden; */
+}
+h1{
+    margin: 50px 100px 45px 300px;
+    padding:40px;
+    text-align: center;
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: "abrakadabra";
+    font-size: 30pt;
+    font-weight: normal;
+    font-style: italic; 
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+
+/* figure{ 
+    overflow: scroll;  /* overflow это чтобы элементы не вылезали за края  */ */
+}
+
+section h3{
+width: 20px;
+box-sizing: border-box; /* в этом случае размеры будут считаться до края границы и все поместиться*/
+margin: 30px auto;
+text-transform: none;
+text-overflow: clip;
+
+}
+section p{
+    text-indent: 20px; /*красная строка*/
+    text-decoration: underline; /*подчеркивание текста*/
+}
+a{ /*текст ссылок - a */
+    text-decoration: none;
+    color: white;
+    letter-spacing: 30px;
+}
+
+.leftimg{
+    /* position: static; */
+    position: relative;
+    top: 50px;
+    left: 150px;
+    z-index: 3;
+}
+.img2{
+    position: relative; /* есть еще абсолютное позиционирование*/
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+.round{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    position: fixed; /* есть еще relative ili absolute i drugie*/
+    bottom: 20px;
+    right: 20px;
+}
